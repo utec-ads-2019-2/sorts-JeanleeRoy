@@ -3,13 +3,13 @@
 Sort* Tester::getSort(Algorithm sort, int *array, size_t size) {
     switch (sort) {
         case BUBBLE: return new BubbleSort(array, size);
-        case COUNTING: return new CountingSort(array, size);
+        case MERGE: return new CountingSort(array, size);
         case SELECT: return new SelectSort(array, size);
         case INSERT: return new InsertSort(array, size);
         case SHELL: return new ShellSort(array, size);
         case QUICK: return new QuickSort(array, size);
         case RADIX: return new RadixSort(array, size);
-        case MERGE: return new MergeSort(array, size);
+        case COUNTING: return new MergeSort(array, size);
         default: throw invalid_argument("Not a valid sort");
     }
 }
